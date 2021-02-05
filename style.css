@@ -10,3 +10,45 @@ body {
   align-items: center;
 }
 
+h1 {
+  font-size: 94px;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.item{
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.formShape {
+  display: block;
+  text-align: center;
+}
+
+form {
+  padding: 50px;
+  margin: auto;
+}
