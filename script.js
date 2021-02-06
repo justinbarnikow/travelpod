@@ -1,7 +1,6 @@
 'use strict'
 
 function goFetch() {
-
   function formatQueryParamsStart(paramsStart) {
     const queryItems = Object.keys(paramsStart)
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(paramsStart[key])}`)
@@ -88,6 +87,7 @@ function goFetch() {
             .catch(error => alert('oops! stop.'))
 
             function distanceResults(distanceResponse) {
+              console.log('fuck off')
               const distanceKilos = `${distanceResponse.resourceSets[0].resources[0].results[0].travelDistance}`
               const distanceMiles = distanceKilos * 0.621371
               const durationMinutes = `${distanceResponse.resourceSets[0].resources[0].results[0].travelDuration}`
@@ -150,14 +150,14 @@ function goFetch() {
                   const audioMinutes = audioSeconds / 60;
                   const audioMinutesFixed = audioMinutes.toFixed(0);
                   //if(audioMinutesFixed === )
-                  $('.results').append(`<ul class="item">
+                  $('.results').append(`<article class="episodeItem"><ul class="item">
                   <li><h2>${podscastResponse.results[i].title_original}<h2></li>
-                  <li><p>${podscastResponse.results[i].description_original}</p></li>
                   <li><img src="${podscastResponse.results[i].thumbnail}" alt="podcast thumbnail"/></li>
+                  <li><p>${podscastResponse.results[i].description_original}</p></li>
                   <li><p>Listennotes Page: <a href="${podscastResponse.results[i].listennotes_url}">Here</a></p></li>
                   <li><p>Website: <a href="${podscastResponse.results[i].link}">Here</a></p></li>
                   <li><p> ${audioMinutesFixed} minutes long</p></li>
-                  </ul>`)
+                  </ul></article>`)
                 }
                 $('.results').removeClass('hidden');
                 $('.travelResults').removeClass('hidden')
@@ -169,7 +169,7 @@ function goFetch() {
 
 
 function clickFindButton() {
-  $('#findForm').submit(event => {
+  $('form').submit(event => {
   event.preventDefault()
 
   goFetch();
