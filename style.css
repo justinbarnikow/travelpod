@@ -8,47 +8,121 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: blue;
+  color:white;
 }
 
 h1 {
-  font-size: 94px;
+  font-size: 72px;
 }
 
 h2 {
-  font-size: 27px;
+  font-size: 22px;
 }
 
 h1, h2 {
   margin: 0;
 }
 
+.wrapper {
+	width: 600px;
+  text-align: center;
+}
+
+/* FORM SECTION------------------------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+fieldset {
+  background-color: rgb(30, 101, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 2%;
+  margin: auto;
+  padding: 40px 60px;
+  width: 350px;
+}
+
+label {
+  float: left;
+  font-size: 18px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  border: 1px solid blue;
+  box-shadow: 3px 3px 2px 3px blue;
+  font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  border-radius: 1%;
+}
+
+input[type=submit] {
+  width: 20%;
+  float: right;
+}
+
+::placeholder {
+  opacity: .5;
+  font-size: 16px;
+}
+
 .group {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .item{
   flex: 1;
   text-align: center;
-  margin: 10px;
 }
 
-.item-double {
-  flex: 2;
-  text-align: center;
+ul {
+  list-style-type: none;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 2%;
+  background-color: rgb(30, 101, 255);
+  margin: 0;
+  padding: 20px;
+  width: 350px;
 }
 
-.hidden {
-  display: none;
+.episodeItem {
+  padding: 15px;
 }
 
-.formShape {
-  display: block;
-  text-align: center;
+.episodeItem img {
+  height: 200px;
+  width: 200px;
 }
 
-form {
-  padding: 50px;
-  margin: auto;
+/* MEDIA SECTION------------------------------------------------- */
+  @media all and (min-width:800px) {
+    h1 {
+    font-size: 94px;
+  }
+  h2 {
+    font-size: 27px;
+  }
+  fieldset {
+    width: 450px;
+    padding: 50px  75px;
+  }
+  ul {
+  list-style-type: none;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 2%;
+  background-color: rgb(30, 101, 255);
+  margin: 0;
+  padding: 20px;
+  width: 600px;
+  }
 }
