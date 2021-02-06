@@ -12,9 +12,12 @@
   <body>
     <header class="wrapper">
     <h1>Travel Pod</h1>
-    <h2>your favorite podcast search engine</h2>
     </header>
     <main class="wrapper">
+      <div id="howItWorksSection">
+        <button id="howTravelPodWorks">How it works</button>
+        <p class="instructions displayHelp">This is how it works</p>
+      </div>
       <form>
         <fieldset class="formWrapper">
           <label>Where from</label>
@@ -26,11 +29,13 @@
           <label>podcast search</label>
           <input type="text" id="podcastSearchInput" placeholder="sports, comedy, crime..."required />
           <br>
-          <input type="submit" value ="GO" />
+          <input id="goButton" type="submit" value ="GO" />
+          <p id="yourTripLength"></p>
         </fieldset>
       </form>
     <section class="results group hidden">
     </section>
+    <h2>the perfect podcast <br>no matter the trip</h2>
     </main>
     <footer class="wrapper">
 
