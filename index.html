@@ -10,30 +10,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="wrapper">
     <h1>Travel Pod</h1>
     <h2>your favorite podcast search engine</h2>
     </header>
-    <div class="formShape">
-      <form id="findForm">
-        <fieldset>
-          <label>enter your trip info and search for a podcast fit for your travels! </label>
-          <br>
+    <main class="wrapper">
+      <form>
+        <fieldset class="formWrapper">
+          <label>Where from</label>
           <input type="text" id="startingInput" placeholder="starting location..." required />
           <br>
+          <label>Where to</label>
           <input type="text" id="endingInput" placeholder="destination..." required />
           <br>
-          <input type="text" id="podcastSearchInput" placeholder="episode title, genre, etc..."required />
+          <label>podcast search</label>
+          <input type="text" id="podcastSearchInput" placeholder="sports, comedy, crime..."required />
           <br>
           <input type="submit" value ="GO" />
         </fieldset>
       </form>
-    </div>
-    <section class="travelResults hidden">
-    </section>
     <section class="results group hidden">
     </section>
+    </main>
+    <footer class="wrapper">
 
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
