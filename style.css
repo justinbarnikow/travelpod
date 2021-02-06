@@ -10,6 +10,7 @@ body {
   align-items: center;
   background-color: blue;
   color:white;
+  letter-spacing: 1.25px;
 }
 
 h1 {
@@ -17,7 +18,7 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 32px;
 }
 
 h1, h2 {
@@ -27,6 +28,36 @@ h1, h2 {
 .wrapper {
 	width: 600px;
   text-align: center;
+}
+
+.displayHelp {
+  display: none
+}
+
+#howTravelPodWorks {
+border: 1px solid black;
+background-color: rgb(30, 101, 255);
+color: white;
+box-shadow: 3px 3px 2px 3px rgba(0, 0, 0, 0.37);
+padding: 10px;
+border-radius: 1%;
+font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+font-size: 14px;
+}
+
+#howTravelPodWorks:hover {
+border: 1px solid black;
+background-color: rgb(117, 160, 255);
+color: white;
+text-shadow: 0 0 3px blue, 0 0 5px blue;
+box-shadow: 3px 3px 2px 3px rgba(0, 0, 0, 0.37);
+padding: 10px;
+border-radius: 1%;
+font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+font-size: 14px;
+}
+
+#howItWorksSection {
 }
 
 /* FORM SECTION------------------------------------------------- */
@@ -42,9 +73,19 @@ form {
 fieldset {
   background-color: rgb(30, 101, 255);
   border: 2px solid rgb(0, 0, 0);
-  border-radius: 2%;
+  border-radius: 1%;
   margin: auto;
-  padding: 40px 60px;
+  padding: 30px 45px 15px;
+  width: 350px;
+}
+
+fieldset:hover {
+  background-color: rgb(117, 160, 255);
+  border: 2px solid rgb(0, 0, 0);
+  text-shadow: 0 0 3px blue, 0 0 5px blue;
+  border-radius: 1%;
+  margin: auto;
+  padding: 30px 45px 15px;
   width: 350px;
 }
 
@@ -66,11 +107,33 @@ input {
 input[type=submit] {
   width: 20%;
   float: right;
+  border: 1px solid black;
+  background-color: rgb(30, 101, 255);
+  color: white;
+  box-shadow: 3px 3px 2px 3px rgba(0, 0, 0, 0.37);
+  padding: 7px 0px;
+  border-radius: 5%;
+  font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(82, 137, 255);
+  text-shadow: 0 0 3px blue, 0 0 5px blue;
 }
 
 ::placeholder {
   opacity: .5;
   font-size: 16px;
+}
+
+.yourTripStyle {
+  padding-top: 25px;
+  font-size: 18px;
+}
+
+#splitBar {
+  padding: 10px;
 }
 
 .group {
@@ -88,7 +151,7 @@ input[type=submit] {
 ul {
   list-style-type: none;
   border: 2px solid rgb(0, 0, 0);
-  border-radius: 2%;
+  border-radius: 1%;
   background-color: rgb(30, 101, 255);
   margin: 0;
   padding: 20px;
@@ -107,19 +170,19 @@ ul {
 /* MEDIA SECTION------------------------------------------------- */
   @media all and (min-width:800px) {
     h1 {
-    font-size: 94px;
+    font-size: 106px;
   }
   h2 {
-    font-size: 27px;
+    font-size: 42px;
   }
-  fieldset {
+  fieldset, fieldset:hover {
     width: 450px;
-    padding: 50px  75px;
+    padding: 25px  50px;
   }
   ul {
   list-style-type: none;
   border: 2px solid rgb(0, 0, 0);
-  border-radius: 2%;
+  border-radius: 1%;
   background-color: rgb(30, 101, 255);
   margin: 0;
   padding: 20px;
