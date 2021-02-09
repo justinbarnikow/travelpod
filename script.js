@@ -92,15 +92,13 @@ function goFetch() {
               const durationMinutes = `${distanceResponse.resourceSets[0].resources[0].results[0].travelDuration}`
               const distanceMilesRounded = distanceMiles.toFixed(2);
               const durationMinutesRounded = Math.round(durationMinutes);
-              console.log("Trip Distance: " + distanceMilesRounded + " miles");
-              console.log("Trip Duration: " + durationMinutesRounded + " minutes");
-              console.log("search engine input: " + podcastInput);
 
-              if(durationMinutesRounded >= 0 && durationMinutesRounded < 60) {
+
+              if(durationMinutesRounded >= 0 && durationMinutesRounded < 80) {
                 const minLength = durationMinutesRounded - 2;
                 const maxLength = durationMinutesRounded + 2;
                 getEverything(minLength, maxLength);
-              } else if(durationMinutesRounded >= 60 && durationMinutesRounded < 120) {
+              } else if(durationMinutesRounded >= 80 && durationMinutesRounded < 150) {
                 const minLength = durationMinutesRounded - 4;
                 const maxLength = durationMinutesRounded + 4;
                 getEverything(minLength, maxLength);
@@ -152,12 +150,11 @@ function goFetch() {
               function podcastResults(podscastResponse) {
                 $('.results').empty();
                 $('#yourTripLength').empty();
-                const searchLength = `${podscastResponse.count}`;
-                console.log(searchLength)               
+                const searchLength = `${podscastResponse.count}`;            
                 $('#yourTripLength').append(`<br><p id="yourTripStyle">
-                Travel Time: ${durationMinutesRounded} minutes <span id="splitBar">  |  </span> Results: ${searchLength}
+                -${mapboxStartResponse.features[0].text} to ${mapboxEndResponse.features[0].text} <br> -Travel Time: ${durationMinutesRounded} minutes <br> -Podcasts Found: ${searchLength}
                 </p>`);
-                
+
                 for(let i = 0; i < searchLength; i++) {
                   const audioSeconds = `${podscastResponse.results[i].audio_length_sec}`;
                   const audioMinutes = audioSeconds / 60;
@@ -169,20 +166,26 @@ function goFetch() {
                     console.log(podcastDescriptionFixed)
                     appendPodcasts(podcastDescriptionFixed);
                   } else {
-                    const podcastDescriptionFixed = podcastDescriptionFull.substring(0,250) + `<a href=${podscastResponse.results[i].listennotes_url} class='ReadMoreBtn' target="_blank">... read full description here</a>`;
+                    const podcastDescriptionFixed = podcastDescriptionFull.substring(0,200) + `<a href=${podscastResponse.results[i].listennotes_url} class='ReadMoreBtn' target="_blank">.... visit epsiode page</a>`;
                     appendPodcasts(podcastDescriptionFixed);
                   }
                   //const podcastDescriptionFixed = podcastDescriptionLong.substring(0,200);
                   function appendPodcasts(podcastDescriptionFixed){
                   //if(audioMinutesFixed === )
-                  $('.results').append(`<article class="episodeItem"><ul class="item">
-                  <li><h2>${podscastResponse.results[i].title_original}<h2></li>
-                  <li><img src="${podscastResponse.results[i].thumbnail}" alt="podcast thumbnail"/></li>
-                  <li><p>${podcastDescriptionFixed}</p></li>
-                  <li><p>Listennotes Page: <a href="${podscastResponse.results[i].listennotes_url}" target="_blank">Here</a></p></li>
-                  <li><p>Website: <a href="${podscastResponse.results[i].link}" target="_blank">Here</a></p></li>
-                  <li><p> ${audioMinutesFixed} minutes long</p></li>
-                  </ul></article>`)
+                  $('.results').append(`<div class="space"><article class="listStyle item">
+                  <h2>${podscastResponse.results[i].title_original}</h2>
+
+                  <img src="${podscastResponse.results[i].thumbnail}" alt="podcast thumbnail"/>
+
+                  <p id="minutesLong"> ${audioMinutesFixed} minutes long</p>
+
+                  <a href="${podscastResponse.results[i].listennotes_url}" target="_blank">listen now</a>
+
+                  <a href="${podscastResponse.results[i].link}" target="_blank">official website</a>
+
+                  <p id="podcastDescriptionStyle"><span id="descTag">Description</span><br>${podcastDescriptionFixed}</p>
+
+                  </article></div>`)
                 $('.results').removeClass('hidden');
                 $('.travelResults').removeClass('hidden')                  }
                 }
@@ -196,22 +199,15 @@ function goFetch() {
 
 
 function clickFindButton() {
-  $('form').submit(event => {
+  $('#travelpodForm').submit(event => {
   event.preventDefault()
 
   goFetch();
   });
 }
 
-function clickHowItWorks() {
-  $('main').on('click', '#howTravelPodWorks', function(event) {
-    $('.instructions').toggleClass('displayHelp')
-  });
-}
-
 function handleEverything() {
   $(clickFindButton);
-  $(clickHowItWorks);
 }
 
 $(handleEverything)
