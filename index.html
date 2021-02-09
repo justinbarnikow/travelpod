@@ -3,23 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Travel Pod</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <header class="wrapper">
-    <h1>Travel Pod</h1>
+  <body class="wrapper">
+    <header>
+    <h1 id="heading">Travel Pod</h1>
+    <h2>A perfect-length podcast<br>for every drive you take</h2>
     </header>
-    <main class="wrapper">
-      <div id="howItWorksSection">
-        <button id="howTravelPodWorks">How it works</button>
-        <p class="instructions displayHelp">This is how it works</p>
-      </div>
-      <form>
-        <fieldset class="formWrapper">
+    <main>
+      <form id="travelpodForm">
+        <fieldset>
+          <label id="introLabel">Enter your drive info & podcast interests... and voila! </label>
+          <hr>
           <label>Where from</label>
           <input type="text" id="startingInput" placeholder="starting location..." required />
           <br>
@@ -34,11 +33,11 @@
         </fieldset>
       </form>
     <section class="results group hidden">
+    
     </section>
-    <h2>the perfect podcast <br>no matter the trip</h2>
     </main>
-    <footer class="wrapper">
-
+    <footer>
+      <a href="#heading"><h2>Travel Pod</h2></a>
     </footer>
     <script src="script.js"></script>
   </body>
