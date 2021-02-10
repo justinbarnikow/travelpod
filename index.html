@@ -1,44 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Travel Pod</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="wrapper">
+    <!--- START: HEADER -->
     <header>
-    <h1 id="heading">Travel Pod</h1>
-    <h2>A perfect-length podcast<br>for every drive you take</h2>
+      <h1 id="heading">Travel Pod</h1>
+      <h2>A perfect-length podcast<br />for every drive you take</h2>
     </header>
+    <!--- END: HEADER -->
     <main>
+      <!--- START: API FORM -->
       <form id="travelpodForm">
         <fieldset>
-          <label id="introLabel">Enter your drive info & podcast interests... and voila! </label>
-          <hr>
-          <label>Where from</label>
-          <input type="text" id="startingInput" placeholder="starting location..." required />
-          <br>
-          <label>Where to</label>
-          <input type="text" id="endingInput" placeholder="destination..." required />
-          <br>
-          <label>podcast search</label>
-          <input type="text" id="podcastSearchInput" placeholder="sports, comedy, crime..."required />
-          <br>
-          <input id="goButton" type="submit" value ="GO" />
+          <legend>Drive info</legend>
+          <p id="introLabel">
+            Enter your trip info & search to view a list of podcasts just as
+            long as your drive-time!
+          </p>
+          <hr />
+          <label for="startingInput">Where from</label>
+          <input
+            type="text"
+            id="startingInput"
+            placeholder="starting location..."
+            required
+          />
+          <br />
+          <label for="endingInput">Where to</label>
+          <input
+            type="text"
+            id="endingInput"
+            placeholder="destination..."
+            required
+          />
+          <br />
+          <label for="podcastSearchInput">podcast search</label>
+          <input
+            type="text"
+            id="podcastSearchInput"
+            placeholder="sports, comedy, crime..."
+            required
+          />
+          <br />
+          <button id="goButton" type="submit" value="GO">GO</button>
           <p id="yourTripLength"></p>
         </fieldset>
       </form>
-    <section class="results group hidden">
-    
-    </section>
+      <!--- END: API FORM -->
+      <section class="results group hidden"></section>
     </main>
+    <!--- START: FOOTER -->
     <footer>
       <a href="#heading"><h2>Travel Pod</h2></a>
     </footer>
+    <!--- END: FOOTER -->
     <script src="script.js"></script>
   </body>
 </html>
