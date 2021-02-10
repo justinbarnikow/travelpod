@@ -3,13 +3,13 @@
 }
 
 body {
-  font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+  font-family: "Staatliches", Arial, Helvetica, sans-serif;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: blue;
-  color:white;
+  color: white;
   letter-spacing: 1.25px;
 }
 
@@ -21,16 +21,17 @@ h2 {
   font-size: 30px;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
 }
 
 .wrapper {
-	width: 100%;
+  width: 100%;
   text-align: center;
   background-color: blue;
 }
- 
+
 /* FORM SECTION------------------------------------------------- */
 form {
   display: flex;
@@ -44,7 +45,8 @@ form {
 
 hr {
   border-top: 1px dotted #8c8b8b;
-	border-bottom: 1px dotted rgb(0, 0, 0);}
+  border-bottom: 1px dotted rgb(0, 0, 0);
+}
 
 fieldset {
   background-color: rgb(30, 101, 255);
@@ -70,12 +72,12 @@ input {
   width: 100%;
   border: 1px solid blue;
   box-shadow: 3px 3px 2px 3px blue;
-  font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+  font-family: "Staatliches", Arial, Helvetica, sans-serif;
   font-size: 18px;
   border-radius: 1%;
 }
 
-input[type=submit] {
+#goButton {
   width: 50px;
   height: 35px;
   float: right;
@@ -84,11 +86,11 @@ input[type=submit] {
   color: white;
   box-shadow: 3px 3px 2px 3px rgba(0, 0, 0, 0.37);
   border-radius: 5%;
-  font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+  font-family: "Staatliches", Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: rgb(82, 137, 255);
   text-shadow: 0 0 3px blue, 0 0 5px blue;
 }
@@ -98,14 +100,14 @@ input[type=submit]:hover {
 }
 
 ::placeholder {
-  opacity: .5;
+  opacity: 0.5;
   font-size: 16px;
 }
 
 #yourTripStyle {
   padding-top: 25px;
   font-size: 16px;
-  text-align: left
+  text-align: left;
 }
 
 .group {
@@ -116,7 +118,7 @@ input[type=submit]:hover {
   align-content: center;
   align-items: center;
   padding: 10px;
-  }
+}
 
 .space {
   padding: 10px 0px;
@@ -128,13 +130,13 @@ item {
 }
 
 .listStyle {
-  font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+  font-family: "Staatliches", Arial, Helvetica, sans-serif;
   width: 350px;
   float: center;
   padding: 10px 15px;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 1%;
-  background-color:rgb(30, 101,  255);
+  background-color: rgb(30, 101, 255);
 }
 
 .listStyle a {
@@ -149,9 +151,8 @@ item {
   text-shadow: 0 0 3px blue, 0 0 5px blue;
 }
 
-.listStyle:hover a{
+.listStyle:hover a {
   text-shadow: 0 0 3px blue, 0 0 5px blue;
-  
 }
 
 .listStyle a:hover {
@@ -164,18 +165,16 @@ article h2 {
   padding-bottom: 5px;
 }
 
-
 img {
   height: 200px;
   width: 200px;
   border: 2px solid black;
+  box-shadow: 3px 3px 2px 3px blue;
 }
 
 #minutesLong {
   font-size: 18px;
 }
-
-
 
 #descTag {
   text-shadow: 0 0 3px rgba(70, 70, 70, 0.767), 0 0 5px rgba(68, 68, 68, 0.719);
@@ -191,6 +190,7 @@ img {
   letter-spacing: 1.25px;
   overflow: hidden;
   text-overflow: ellipsis;
+  box-shadow: 3px 3px 2px 3px blue;
 }
 
 article button {
@@ -211,27 +211,36 @@ footer h2 {
   color: white;
 }
 
-a:link    { color: rgb(202, 202, 202);  }
-a:visited { color: rgb(202, 202, 202);  }
-a:hover   { color: rgb(202, 202, 202); }
-a:active  { color: rgb(202, 202, 202);  }
+a:link {
+  color: rgb(202, 202, 202);
+}
+a:visited {
+  color: rgb(202, 202, 202);
+}
+a:hover {
+  color: rgb(202, 202, 202);
+}
+a:active {
+  color: rgb(202, 202, 202);
+}
 
 /* MEDIA SECTION------------------------------------------------- */
-  @media all and (min-width:800px) {
+@media all and (min-width: 800px) {
   h1 {
     font-size: 106px;
   }
   h2 {
     font-size: 42px;
   }
-  fieldset, fieldset:hover {
+  fieldset,
+  fieldset:hover {
     width: 450px;
     padding: 35px;
   }
-  
+
   .listStyle {
-  width: 600px;
-  padding: 10px 40px;
+    width: 600px;
+    padding: 10px 40px;
   }
 
   img {
@@ -239,7 +248,7 @@ a:active  { color: rgb(202, 202, 202);  }
     width: 300px;
   }
   article h2 {
-  font-size: 30px;
+    font-size: 30px;
   }
   article {
     font-size: 18px;
