@@ -1,4 +1,6 @@
 # Travel Pod
+https://justinbarnikow.github.io/travelpod/
+
 ## Description
 Travel Pod is an app-based site created for users looking for a podcast for an upcoming drive. Users can enter their starting location and final destination, as well as their podcast interests, and a curated list of podcasts will be shown to the user. It is a list based on the length of the users trip. This is done by multiple API's taking the location and turning it into GPS coordinates, puilling the trip distance in minutes, and appending podcasts of a certain length with a specified margin of error.
 
