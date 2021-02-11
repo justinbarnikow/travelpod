@@ -17,6 +17,7 @@ I wanted a podcast search engine that really filled a specific need for people. 
 
 ## Built With
 * Javascript
+* jQuery
 * HTML
 * CSS
 * Listen API
